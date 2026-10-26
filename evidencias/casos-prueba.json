@@ -1,0 +1,770 @@
+[
+  {
+    "caso": "R01 acepta mínimo de tres caracteres",
+    "archivo": "extended.spec.ts",
+    "linea": 44,
+    "estado": "expected",
+    "duracion_ms": 1409,
+    "esperado": "Aceptar el valor límite indicado; agregar la sexta fila y mostrar confirmación."
+  },
+  {
+    "caso": "R01 acepta acentos y eñe",
+    "archivo": "extended.spec.ts",
+    "linea": 44,
+    "estado": "expected",
+    "duracion_ms": 1172,
+    "esperado": "Aceptar el valor límite indicado; agregar la sexta fila y mostrar confirmación."
+  },
+  {
+    "caso": "R01 acepta espacios exteriores",
+    "archivo": "extended.spec.ts",
+    "linea": 44,
+    "estado": "expected",
+    "duracion_ms": 1154,
+    "esperado": "Aceptar el valor límite indicado; agregar la sexta fila y mostrar confirmación."
+  },
+  {
+    "caso": "R01 acepta precio mínimo monetario",
+    "archivo": "extended.spec.ts",
+    "linea": 44,
+    "estado": "expected",
+    "duracion_ms": 1185,
+    "esperado": "Aceptar el valor límite indicado; agregar la sexta fila y mostrar confirmación."
+  },
+  {
+    "caso": "R01 acepta precio máximo permitido",
+    "archivo": "extended.spec.ts",
+    "linea": 44,
+    "estado": "expected",
+    "duracion_ms": 1120,
+    "esperado": "Aceptar el valor límite indicado; agregar la sexta fila y mostrar confirmación."
+  },
+  {
+    "caso": "R01 acepta precio entero",
+    "archivo": "extended.spec.ts",
+    "linea": 44,
+    "estado": "expected",
+    "duracion_ms": 1171,
+    "esperado": "Aceptar el valor límite indicado; agregar la sexta fila y mostrar confirmación."
+  },
+  {
+    "caso": "R01 acepta un decimal",
+    "archivo": "extended.spec.ts",
+    "linea": 44,
+    "estado": "expected",
+    "duracion_ms": 1063,
+    "esperado": "Aceptar el valor límite indicado; agregar la sexta fila y mostrar confirmación."
+  },
+  {
+    "caso": "R01 acepta 120 caracteres",
+    "archivo": "extended.spec.ts",
+    "linea": 44,
+    "estado": "expected",
+    "duracion_ms": 1130,
+    "esperado": "Aceptar el valor límite indicado; agregar la sexta fila y mostrar confirmación."
+  },
+  {
+    "caso": "R02 actualiza el contador de Bebidas",
+    "archivo": "extended.spec.ts",
+    "linea": 53,
+    "estado": "expected",
+    "duracion_ms": 1227,
+    "esperado": "Incrementar solo el contador de la categoría registrada, junto al total global."
+  },
+  {
+    "caso": "R02 actualiza el contador de Abarrotes",
+    "archivo": "extended.spec.ts",
+    "linea": 53,
+    "estado": "expected",
+    "duracion_ms": 1097,
+    "esperado": "Incrementar solo el contador de la categoría registrada, junto al total global."
+  },
+  {
+    "caso": "R02 actualiza el contador de Limpieza",
+    "archivo": "extended.spec.ts",
+    "linea": 53,
+    "estado": "expected",
+    "duracion_ms": 1111,
+    "esperado": "Incrementar solo el contador de la categoría registrada, junto al total global."
+  },
+  {
+    "caso": "R03 diez registros consecutivos conservan códigos únicos y datos iniciales",
+    "archivo": "extended.spec.ts",
+    "linea": 64,
+    "estado": "expected",
+    "duracion_ms": 2518,
+    "esperado": "Registrar diez productos: quince filas, quince códigos distintos y último código 15."
+  },
+  {
+    "caso": "R04 las etiquetas HTML se muestran como texto sin ejecutar scripts",
+    "archivo": "extended.spec.ts",
+    "linea": 76,
+    "estado": "expected",
+    "duracion_ms": 1109,
+    "esperado": "Mostrar HTML como texto; no crear imágenes ni ejecutar cuadros de diálogo."
+  },
+  {
+    "caso": "R05 Enter envía el formulario y conserva el precio con dos decimales",
+    "archivo": "extended.spec.ts",
+    "linea": 91,
+    "estado": "expected",
+    "duracion_ms": 1188,
+    "esperado": "Enviar con Enter desde el precio, obtener seis filas y mostrar 3.50."
+  },
+  {
+    "caso": "V01 rechaza el precio fuera de formato 1.234",
+    "archivo": "extended.spec.ts",
+    "linea": 108,
+    "estado": "expected",
+    "duracion_ms": 1142,
+    "esperado": "Rechazar formato excesivo o precio superior al máximo; no agregar filas."
+  },
+  {
+    "caso": "V01 rechaza el precio fuera de formato 1000000",
+    "archivo": "extended.spec.ts",
+    "linea": 108,
+    "estado": "expected",
+    "duracion_ms": 1105,
+    "esperado": "Rechazar formato excesivo o precio superior al máximo; no agregar filas."
+  },
+  {
+    "caso": "V02 dirige el foco al precio si solo el precio está mal",
+    "archivo": "extended.spec.ts",
+    "linea": 116,
+    "estado": "expected",
+    "duracion_ms": 1114,
+    "esperado": "Con descripción y categoría válidas, enfocar precio si contiene -2."
+  },
+  {
+    "caso": "V03 dirige el foco a la categoría si solo falta la categoría",
+    "archivo": "extended.spec.ts",
+    "linea": 122,
+    "estado": "expected",
+    "duracion_ms": 1085,
+    "esperado": "Con descripción y precio válidos, enfocar la categoría vacía."
+  },
+  {
+    "caso": "V04 corregir un campo retira solo su error",
+    "archivo": "extended.spec.ts",
+    "linea": 128,
+    "estado": "expected",
+    "duracion_ms": 998,
+    "esperado": "Tras tres errores, corregir descripción retira solo ese error y su aria-invalid."
+  },
+  {
+    "caso": "V05 corregir datos inválidos permite el registro sin consumir códigos",
+    "archivo": "extended.spec.ts",
+    "linea": 135,
+    "estado": "expected",
+    "duracion_ms": 1202,
+    "esperado": "Corregir un envío vacío permite registrar con código 6, sin saltos ni errores."
+  },
+  {
+    "caso": "V06 editar después de un éxito retira la confirmación anterior",
+    "archivo": "extended.spec.ts",
+    "linea": 144,
+    "estado": "expected",
+    "duracion_ms": 1215,
+    "esperado": "Editar un campo retira la confirmación antigua para evitar un éxito engañoso."
+  },
+  {
+    "caso": "V07 Limpiar después de un éxito conserva los productos",
+    "archivo": "extended.spec.ts",
+    "linea": 152,
+    "estado": "expected",
+    "duracion_ms": 1202,
+    "esperado": "Limpiar tras registrar conserva seis filas, retira la confirmación y enfoca descripción."
+  },
+  {
+    "caso": "V08 un error conserva los campos válidos para corregirlo",
+    "archivo": "extended.spec.ts",
+    "linea": 161,
+    "estado": "expected",
+    "duracion_ms": 1021,
+    "esperado": "Un error de precio conserva descripción y categoría para facilitar su corrección."
+  },
+  {
+    "caso": "V09 no se puede superar el límite de 120 caracteres en el campo",
+    "archivo": "extended.spec.ts",
+    "linea": 168,
+    "estado": "expected",
+    "duracion_ms": 995,
+    "esperado": "El campo impide introducir más de 120 caracteres."
+  },
+  {
+    "caso": "C01 búsqueda de PRD-0003",
+    "archivo": "extended.spec.ts",
+    "linea": 186,
+    "estado": "expected",
+    "duracion_ms": 1166,
+    "esperado": "Encontrar la fila esperada por código, mayúsculas, espacios o categoría."
+  },
+  {
+    "caso": "C01 búsqueda de COCA COLA",
+    "archivo": "extended.spec.ts",
+    "linea": 186,
+    "estado": "expected",
+    "duracion_ms": 1022,
+    "esperado": "Encontrar la fila esperada por código, mayúsculas, espacios o categoría."
+  },
+  {
+    "caso": "C01 búsqueda de   agua  ",
+    "archivo": "extended.spec.ts",
+    "linea": 186,
+    "estado": "expected",
+    "duracion_ms": 1087,
+    "esperado": "Encontrar la fila esperada por código, mayúsculas, espacios o categoría."
+  },
+  {
+    "caso": "C01 búsqueda de limpieza",
+    "archivo": "extended.spec.ts",
+    "linea": 186,
+    "estado": "expected",
+    "duracion_ms": 965,
+    "esperado": "Encontrar la fila esperada por código, mayúsculas, espacios o categoría."
+  },
+  {
+    "caso": "C02 borrar la búsqueda restituye la lista completa",
+    "archivo": "extended.spec.ts",
+    "linea": 192,
+    "estado": "expected",
+    "duracion_ms": 984,
+    "esperado": "El botón de borrar deja la consulta vacía y recupera las cinco filas."
+  },
+  {
+    "caso": "C03 categoría y búsqueda se combinan, y el vacío permite recuperar",
+    "archivo": "extended.spec.ts",
+    "linea": 200,
+    "estado": "expected",
+    "duracion_ms": 1771,
+    "esperado": "Mostrar vacío al cruzar Bebidas y Arroz; Limpiar filtros recupera todo."
+  },
+  {
+    "caso": "C04 el tercer clic en Precio recupera el orden inicial",
+    "archivo": "extended.spec.ts",
+    "linea": 216,
+    "estado": "expected",
+    "duracion_ms": 1164,
+    "esperado": "El tercer clic restituye el orden de códigos original y aria-sort none."
+  },
+  {
+    "caso": "C05 los filtros no cambian los contadores globales",
+    "archivo": "extended.spec.ts",
+    "linea": 227,
+    "estado": "expected",
+    "duracion_ms": 1047,
+    "esperado": "Filtrar a Limpieza deja una fila y mantiene los totales globales."
+  },
+  {
+    "caso": "C06 registrar con filtros activos muestra la nueva fila y limpia filtros",
+    "archivo": "extended.spec.ts",
+    "linea": 235,
+    "estado": "expected",
+    "duracion_ms": 1263,
+    "esperado": "Registrar Limpieza desde filtro de Bebidas elimina filtros y muestra la sexta fila."
+  },
+  {
+    "caso": "C07 una fila recién registrada tiene una sola etiqueta Nuevo",
+    "archivo": "extended.spec.ts",
+    "linea": 245,
+    "estado": "expected",
+    "duracion_ms": 1394,
+    "esperado": "Solo la última fila registrada conserva la etiqueta Nuevo."
+  },
+  {
+    "caso": "E01 CSV incluye productos nuevos aunque haya un filtro activo",
+    "archivo": "extended.spec.ts",
+    "linea": 259,
+    "estado": "expected",
+    "duracion_ms": 1743,
+    "esperado": "Exportar las seis filas reales, aun cuando un filtro muestre solo dos."
+  },
+  {
+    "caso": "E02 el encabezado Nuevo producto enfoca el formulario",
+    "archivo": "extended.spec.ts",
+    "linea": 271,
+    "estado": "expected",
+    "duracion_ms": 1086,
+    "esperado": "El botón Nuevo producto dirige el foco a la descripción del formulario."
+  },
+  {
+    "caso": "E03 el enlace de salto funciona con teclado",
+    "archivo": "extended.spec.ts",
+    "linea": 279,
+    "estado": "expected",
+    "duracion_ms": 1144,
+    "esperado": "Tab enfoca el enlace de salto y Enter lleva al contenido principal."
+  },
+  {
+    "caso": "E04 todos los campos obligatorios tienen etiquetas y ayudas accesibles",
+    "archivo": "extended.spec.ts",
+    "linea": 287,
+    "estado": "expected",
+    "duracion_ms": 1193,
+    "esperado": "Campos etiquetados como obligatorios y errores relacionados mediante aria-describedby."
+  },
+  {
+    "caso": "E05 preferencia de movimiento reducido suprime la animación sin bloquear el registro",
+    "archivo": "extended.spec.ts",
+    "linea": 298,
+    "estado": "expected",
+    "duracion_ms": 1161,
+    "esperado": "Con movimiento reducido, registrar con éxito y suprimir animaciones de fila y mensaje."
+  },
+  {
+    "caso": "E06 tema oscuro y fuentes solicitadas se cargan localmente",
+    "archivo": "extended.spec.ts",
+    "linea": 315,
+    "estado": "expected",
+    "duracion_ms": 1016,
+    "esperado": "Usar color-scheme dark, Space Grotesk en título y Manrope en cuerpo."
+  },
+  {
+    "caso": "E07 sin desbordamiento de página a 320px",
+    "archivo": "extended.spec.ts",
+    "linea": 336,
+    "estado": "expected",
+    "duracion_ms": 859,
+    "esperado": "La anchura total de la página no supera la ventana en el tamaño indicado."
+  },
+  {
+    "caso": "E07 sin desbordamiento de página a 375px",
+    "archivo": "extended.spec.ts",
+    "linea": 336,
+    "estado": "expected",
+    "duracion_ms": 874,
+    "esperado": "La anchura total de la página no supera la ventana en el tamaño indicado."
+  },
+  {
+    "caso": "E07 sin desbordamiento de página a 1024px",
+    "archivo": "extended.spec.ts",
+    "linea": 336,
+    "estado": "expected",
+    "duracion_ms": 941,
+    "esperado": "La anchura total de la página no supera la ventana en el tamaño indicado."
+  },
+  {
+    "caso": "E07 sin desbordamiento de página a 1920px",
+    "archivo": "extended.spec.ts",
+    "linea": 336,
+    "estado": "expected",
+    "duracion_ms": 1007,
+    "esperado": "La anchura total de la página no supera la ventana en el tamaño indicado."
+  },
+  {
+    "caso": "E08 la tabla móvil permite consultar las columnas que quedan fuera de vista",
+    "archivo": "extended.spec.ts",
+    "linea": 348,
+    "estado": "expected",
+    "duracion_ms": 918,
+    "esperado": "Desplazar horizontalmente la tabla móvil dentro de su propio contenedor."
+  },
+  {
+    "caso": "E09 nueva fila y confirmación tienen animación corta sin bucles",
+    "archivo": "extended.spec.ts",
+    "linea": 361,
+    "estado": "expected",
+    "duracion_ms": 1170,
+    "esperado": "La animación ledger-entry se ejecuta una sola vez y la confirmación es visible."
+  },
+  {
+    "caso": "P01 muestra los cinco productos iniciales con todos sus campos",
+    "archivo": "products.spec.ts",
+    "linea": 20,
+    "estado": "expected",
+    "duracion_ms": 1352,
+    "esperado": "Verificar cinco filas, código, descripción, precio, categoría y título de la pantalla."
+  },
+  {
+    "caso": "P02 registra datos válidos, limpia formulario y confirma",
+    "archivo": "products.spec.ts",
+    "linea": 34,
+    "estado": "expected",
+    "duracion_ms": 1500,
+    "esperado": "Registrar el producto, confirmar la operación, vaciar campos y obtener seis filas."
+  },
+  {
+    "caso": "P03 actualiza tabla sin recargar y genera códigos únicos consecutivos",
+    "archivo": "products.spec.ts",
+    "linea": 53,
+    "estado": "expected",
+    "duracion_ms": 1361,
+    "esperado": "Obtener códigos 6 y 7 sin duplicados y sin navegación de página."
+  },
+  {
+    "caso": "P04 rechaza descripción \"\"",
+    "archivo": "products.spec.ts",
+    "linea": 70,
+    "estado": "expected",
+    "duracion_ms": 1106,
+    "esperado": "Rechazar la descripción indicada; mostrar su error y conservar cinco filas."
+  },
+  {
+    "caso": "P04 rechaza descripción \"ab\"",
+    "archivo": "products.spec.ts",
+    "linea": 70,
+    "estado": "expected",
+    "duracion_ms": 1151,
+    "esperado": "Rechazar la descripción indicada; mostrar su error y conservar cinco filas."
+  },
+  {
+    "caso": "P04 rechaza descripción \"   \"",
+    "archivo": "products.spec.ts",
+    "linea": 70,
+    "estado": "expected",
+    "duracion_ms": 1219,
+    "esperado": "Rechazar la descripción indicada; mostrar su error y conservar cinco filas."
+  },
+  {
+    "caso": "P05 rechaza precio \"\"",
+    "archivo": "products.spec.ts",
+    "linea": 82,
+    "estado": "expected",
+    "duracion_ms": 1059,
+    "esperado": "Rechazar el precio indicado; mostrar su error y conservar cinco filas."
+  },
+  {
+    "caso": "P05 rechaza precio \"0\"",
+    "archivo": "products.spec.ts",
+    "linea": 82,
+    "estado": "expected",
+    "duracion_ms": 1126,
+    "esperado": "Rechazar el precio indicado; mostrar su error y conservar cinco filas."
+  },
+  {
+    "caso": "P05 rechaza precio \"-1\"",
+    "archivo": "products.spec.ts",
+    "linea": 82,
+    "estado": "expected",
+    "duracion_ms": 1087,
+    "esperado": "Rechazar el precio indicado; mostrar su error y conservar cinco filas."
+  },
+  {
+    "caso": "P06 rechaza registro sin categoría",
+    "archivo": "products.spec.ts",
+    "linea": 93,
+    "estado": "expected",
+    "duracion_ms": 1097,
+    "esperado": "Impedir el alta sin categoría y mostrar la ayuda correspondiente."
+  },
+  {
+    "caso": "P07 Limpiar restablece campos y mensajes",
+    "archivo": "products.spec.ts",
+    "linea": 101,
+    "estado": "expected",
+    "duracion_ms": 1193,
+    "esperado": "Vaciar campos y errores al limpiar, sin modificar los cinco productos."
+  },
+  {
+    "caso": "P08 muestra validaciones y dirige foco al primer campo incorrecto",
+    "archivo": "products.spec.ts",
+    "linea": 114,
+    "estado": "expected",
+    "duracion_ms": 1303,
+    "esperado": "Mostrar los tres errores y dirigir el foco a la descripción."
+  },
+  {
+    "caso": "P09 recargar recupera los ejemplos y descarta cambios temporales",
+    "archivo": "products.spec.ts",
+    "linea": 127,
+    "estado": "expected",
+    "duracion_ms": 1405,
+    "esperado": "Volver a cinco ejemplos al recargar y descartar el registro temporal."
+  },
+  {
+    "caso": "P10 buscar, filtrar y restablecer funciona sin alterar el catálogo",
+    "archivo": "products.spec.ts",
+    "linea": 141,
+    "estado": "expected",
+    "duracion_ms": 1617,
+    "esperado": "Combinar consulta y categoría; recuperar el listado ante una búsqueda sin resultados."
+  },
+  {
+    "caso": "P11 ordena por precio ascendente y descendente",
+    "archivo": "products.spec.ts",
+    "linea": 159,
+    "estado": "expected",
+    "duracion_ms": 1121,
+    "esperado": "Ordenar por precio: Agua primero en ascendente y Aceite primero en descendente."
+  },
+  {
+    "caso": "P12 exporta los productos actuales en CSV",
+    "archivo": "products.spec.ts",
+    "linea": 165,
+    "estado": "expected",
+    "duracion_ms": 1281,
+    "esperado": "Descargar CSV con nombre correcto, encabezados y las cinco filas iniciales."
+  },
+  {
+    "caso": "P13 interfaz adaptable a 390px y registro operativo",
+    "archivo": "products.spec.ts",
+    "linea": 176,
+    "estado": "expected",
+    "duracion_ms": 2019,
+    "esperado": "Registrar un producto en el tamaño indicado sin desbordar la página."
+  },
+  {
+    "caso": "P13 interfaz adaptable a 768px y registro operativo",
+    "archivo": "products.spec.ts",
+    "linea": 176,
+    "estado": "expected",
+    "duracion_ms": 1377,
+    "esperado": "Registrar un producto en el tamaño indicado sin desbordar la página."
+  },
+  {
+    "caso": "P14 funciona sin API ni servicios externos y sin errores de consola",
+    "archivo": "products.spec.ts",
+    "linea": 199,
+    "estado": "expected",
+    "duracion_ms": 1779,
+    "esperado": "Registrar sin llamadas a API, solicitudes externas ni errores JavaScript."
+  },
+  {
+    "caso": "U01 precio vacío se rechaza",
+    "archivo": "validation.spec.ts",
+    "linea": 25,
+    "estado": "expected",
+    "duracion_ms": 2,
+    "esperado": "La función de validación devuelve error de precio para la entrada indicada."
+  },
+  {
+    "caso": "U01 precio cero se rechaza",
+    "archivo": "validation.spec.ts",
+    "linea": 25,
+    "estado": "expected",
+    "duracion_ms": 0,
+    "esperado": "La función de validación devuelve error de precio para la entrada indicada."
+  },
+  {
+    "caso": "U01 precio negativo se rechaza",
+    "archivo": "validation.spec.ts",
+    "linea": 25,
+    "estado": "expected",
+    "duracion_ms": 0,
+    "esperado": "La función de validación devuelve error de precio para la entrada indicada."
+  },
+  {
+    "caso": "U01 precio no numérico se rechaza",
+    "archivo": "validation.spec.ts",
+    "linea": 25,
+    "estado": "expected",
+    "duracion_ms": 0,
+    "esperado": "La función de validación devuelve error de precio para la entrada indicada."
+  },
+  {
+    "caso": "U01 precio infinito se rechaza",
+    "archivo": "validation.spec.ts",
+    "linea": 25,
+    "estado": "expected",
+    "duracion_ms": 0,
+    "esperado": "La función de validación devuelve error de precio para la entrada indicada."
+  },
+  {
+    "caso": "U01 precio NaN se rechaza",
+    "archivo": "validation.spec.ts",
+    "linea": 25,
+    "estado": "expected",
+    "duracion_ms": 0,
+    "esperado": "La función de validación devuelve error de precio para la entrada indicada."
+  },
+  {
+    "caso": "U01 precio solo espacios se rechaza",
+    "archivo": "validation.spec.ts",
+    "linea": 25,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "La función de validación devuelve error de precio para la entrada indicada."
+  },
+  {
+    "caso": "U01 precio tres decimales se rechaza",
+    "archivo": "validation.spec.ts",
+    "linea": 25,
+    "estado": "expected",
+    "duracion_ms": 0,
+    "esperado": "La función de validación devuelve error de precio para la entrada indicada."
+  },
+  {
+    "caso": "U01 precio sobre el máximo se rechaza",
+    "archivo": "validation.spec.ts",
+    "linea": 25,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "La función de validación devuelve error de precio para la entrada indicada."
+  },
+  {
+    "caso": "U01 precio notación exponencial se rechaza",
+    "archivo": "validation.spec.ts",
+    "linea": 25,
+    "estado": "expected",
+    "duracion_ms": 0,
+    "esperado": "La función de validación devuelve error de precio para la entrada indicada."
+  },
+  {
+    "caso": "U01 precio coma decimal se rechaza",
+    "archivo": "validation.spec.ts",
+    "linea": 25,
+    "estado": "expected",
+    "duracion_ms": 0,
+    "esperado": "La función de validación devuelve error de precio para la entrada indicada."
+  },
+  {
+    "caso": "U02 descripción válida tres caracteres",
+    "archivo": "validation.spec.ts",
+    "linea": 37,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "La función acepta la descripción indicada con los otros datos válidos."
+  },
+  {
+    "caso": "U02 descripción válida Unicode",
+    "archivo": "validation.spec.ts",
+    "linea": 37,
+    "estado": "expected",
+    "duracion_ms": 0,
+    "esperado": "La función acepta la descripción indicada con los otros datos válidos."
+  },
+  {
+    "caso": "U02 descripción válida espacios exteriores",
+    "archivo": "validation.spec.ts",
+    "linea": 37,
+    "estado": "expected",
+    "duracion_ms": 0,
+    "esperado": "La función acepta la descripción indicada con los otros datos válidos."
+  },
+  {
+    "caso": "U02 descripción válida longitud máxima",
+    "archivo": "validation.spec.ts",
+    "linea": 37,
+    "estado": "expected",
+    "duracion_ms": 0,
+    "esperado": "La función acepta la descripción indicada con los otros datos válidos."
+  },
+  {
+    "caso": "U03 descripción inválida vacía",
+    "archivo": "validation.spec.ts",
+    "linea": 47,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "La función devuelve error de descripción para el caso inválido indicado."
+  },
+  {
+    "caso": "U03 descripción inválida dos caracteres",
+    "archivo": "validation.spec.ts",
+    "linea": 47,
+    "estado": "expected",
+    "duracion_ms": 2,
+    "esperado": "La función devuelve error de descripción para el caso inválido indicado."
+  },
+  {
+    "caso": "U03 descripción inválida solo espacios",
+    "archivo": "validation.spec.ts",
+    "linea": 47,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "La función devuelve error de descripción para el caso inválido indicado."
+  },
+  {
+    "caso": "U03 descripción inválida sobre 120",
+    "archivo": "validation.spec.ts",
+    "linea": 47,
+    "estado": "expected",
+    "duracion_ms": 2,
+    "esperado": "La función devuelve error de descripción para el caso inválido indicado."
+  },
+  {
+    "caso": "U04 categoría no permitida \"\"",
+    "archivo": "validation.spec.ts",
+    "linea": 54,
+    "estado": "expected",
+    "duracion_ms": 2,
+    "esperado": "Rechazar categoría vacía, desconocida o con capitalización no permitida."
+  },
+  {
+    "caso": "U04 categoría no permitida \"Electrónica\"",
+    "archivo": "validation.spec.ts",
+    "linea": 54,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "Rechazar categoría vacía, desconocida o con capitalización no permitida."
+  },
+  {
+    "caso": "U04 categoría no permitida \"bebidas\"",
+    "archivo": "validation.spec.ts",
+    "linea": 54,
+    "estado": "expected",
+    "duracion_ms": 3,
+    "esperado": "Rechazar categoría vacía, desconocida o con capitalización no permitida."
+  },
+  {
+    "caso": "U05 tres errores independientes se devuelven juntos",
+    "archivo": "validation.spec.ts",
+    "linea": 60,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "Devolver simultáneamente tres errores independientes para el formulario vacío."
+  },
+  {
+    "caso": "U06 validar no modifica el objeto original",
+    "archivo": "validation.spec.ts",
+    "linea": 67,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "Validar sin mutar el objeto de campos recibido."
+  },
+  {
+    "caso": "U07 cinco ejemplos con códigos únicos y precios positivos",
+    "archivo": "validation.spec.ts",
+    "linea": 74,
+    "estado": "expected",
+    "duracion_ms": 2,
+    "esperado": "Mantener cinco ejemplos con códigos distintos y precios positivos."
+  },
+  {
+    "caso": "U08 CSV conserva comas y escapa comillas en la descripción",
+    "archivo": "validation.spec.ts",
+    "linea": 79,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "Conservar comas y duplicar correctamente las comillas dentro del CSV."
+  },
+  {
+    "caso": "U09 neutraliza fórmula CSV =2+2",
+    "archivo": "validation.spec.ts",
+    "linea": 86,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "Anteponer un apóstrofo a una descripción que podría ejecutarse como fórmula."
+  },
+  {
+    "caso": "U09 neutraliza fórmula CSV +SUM(1,2)",
+    "archivo": "validation.spec.ts",
+    "linea": 86,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "Anteponer un apóstrofo a una descripción que podría ejecutarse como fórmula."
+  },
+  {
+    "caso": "U09 neutraliza fórmula CSV -2+3",
+    "archivo": "validation.spec.ts",
+    "linea": 86,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "Anteponer un apóstrofo a una descripción que podría ejecutarse como fórmula."
+  },
+  {
+    "caso": "U09 neutraliza fórmula CSV @SUM(1,2)",
+    "archivo": "validation.spec.ts",
+    "linea": 86,
+    "estado": "expected",
+    "duracion_ms": 1,
+    "esperado": "Anteponer un apóstrofo a una descripción que podría ejecutarse como fórmula."
+  },
+  {
+    "caso": "U10 lista vacía exporta solo encabezados y marca UTF8",
+    "archivo": "validation.spec.ts",
+    "linea": 93,
+    "estado": "expected",
+    "duracion_ms": 2,
+    "esperado": "Exportar solo encabezados para lista vacía y conservar marca UTF8."
+  }
+]

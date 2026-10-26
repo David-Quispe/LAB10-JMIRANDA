@@ -16,7 +16,7 @@ Abrir http://127.0.0.1:5173. No requiere Django, API, base de datos ni servicios
 
 ## Tecnologías
 
-React 19 con componentes funcionales, TypeScript, Vite 8, Tailwind CSS 4 y componentes reales de shadcn/ui (Button, Input, Label, Card, Table y NativeSelect). Los componentes se generaron con la CLI de shadcn y se personalizaron. Iconos de Lucide; tipografía IBM Plex Sans y Mono.
+React 19 con componentes funcionales, TypeScript, Vite 8, Tailwind CSS 4 y componentes reales de shadcn/ui (Button, Input, Label, Card, Table y NativeSelect). Los componentes se generaron con la CLI de shadcn y se personalizaron. Iconos de Lucide; tipografía Space Grotesk y Manrope; Cormorant Garamond para énfasis cursivos e IBM Plex Mono para códigos.
 
 ## Funciones
 
@@ -38,7 +38,11 @@ React 19 con componentes funcionales, TypeScript, Vite 8, Tailwind CSS 4 y compo
 - `src/lib/product-validation.ts`: reglas de validación.
 - `src/components/ui/`: componentes generados por shadcn/ui.
 - `src/index.css` y `src/App.css`: Tailwind, fuentes y estilos adaptables.
-- `tests/products.spec.ts`: pruebas en navegador.
+- `tests/products.spec.ts`: 19 casos de requisitos obligatorios.
+- `tests/extended.spec.ts`: 46 casos adicionales de interfaz, filtros, límites, teclado y animación.
+- `tests/validation.spec.ts`: 31 casos aislados de validación y CSV.
+- `src/lib/product-csv.ts`: exportación CSV con neutralización de fórmulas.
+- `scripts/resumen-pruebas.mjs`: resumen del resultado real guardado; ejecutar npm run test:summary.
 
 ## Verificación
 
@@ -51,7 +55,7 @@ npm run test:report
 
 Las pruebas usan Microsoft Edge instalado. En equipos que no lo tengan, instalar el navegador de Playwright y cambiar `channel` en `playwright.config.ts` según el navegador disponible.
 
-Se verificaron 19 casos: los ocho escenarios obligatorios y variantes de entradas vacías, espacios, precio cero/negativo; códigos únicos, recarga temporal, búsqueda, filtros, orden, CSV, móvil, tableta y ausencia de llamadas a una API. Resultados: 19 aprobadas, 0 fallidas, 0 omitidas. Evidencias en `evidencias/`.
+Se verificaron 96 casos (65 de interfaz y 31 unitarios): los ocho escenarios obligatorios y variantes de entradas vacías, espacios, precio cero/negativo; códigos únicos, recarga temporal, búsqueda, filtros, orden, CSV, móvil, tableta y ausencia de llamadas a una API. Resultados: 96 aprobadas, 0 fallidas, 0 omitidas. Evidencias en `evidencias/`.
 
 ## Creación y configuración
 
@@ -76,4 +80,4 @@ Se configuraron el alias `@/` y el plugin de Tailwind en Vite. `baseUrl` se omit
 - [Tailwind CSS con Vite](https://tailwindcss.com/docs/installation/using-vite): integración oficial.
 - [React useState](https://react.dev/reference/react/useState): estado y actualizaciones.
 
-Diseño propio llamado Bodega, con marco verde grisáceo, tabla legible y formulario lateral. No se copió código de productos comerciales ni se utilizaron servicios de pago.
+Diseño propio llamado Bodega, ahora Bodega Atelier, siguiendo las referencias oscuras y doradas aportadas por el usuario. Incluye contadores animados (280 ms), confirmación animada (280 ms), resaltado de nueva fila (950 ms) y respeto a prefers-reduced-motion. No se copió código de productos comerciales ni se utilizaron servicios de pago.

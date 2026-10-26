@@ -6,16 +6,23 @@ import {
   ClipboardList,
   Info,
   Plus,
-  ShoppingBasket,
+  Diamond,
+  Layers3,
+  Sparkles,
+  ShieldCheck,
+  PackagePlus,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProductForm } from "@/components/product-form";
 import { ProductList } from "@/components/product-list";
 import {
   initialProducts,
+  categories as productCategories,
   type Product,
   type ProductInput,
+  formatCode,
 } from "@/data/products";
+import { buildProductsCsv } from "@/lib/product-csv";
 import "./App.css";
 
 export default function App() {
@@ -27,7 +34,8 @@ export default function App() {
     Math.max(...initialProducts.map((p) => p.codigo)) + 1,
   );
   const formSection = useRef<HTMLElement>(null);
-  const categories = new Set(products.map((p) => p.categoria)).size;
+  const categoryCount = new Set(products.map((p) => p.categoria)).size;
+  const sessionCount = products.length - initialProducts.length;
 
   function registerProduct(input: ProductInput) {
     const codigo = nextCode.current++;
@@ -36,33 +44,27 @@ export default function App() {
   }
 
   function focusForm() {
-    formSection.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    formSection.current?.scrollIntoView({
+      behavior: reduce ? "instant" : "smooth",
+      block: "start",
+    });
     document.getElementById("descripcion")?.focus({ preventScroll: true });
   }
 
   function exportProducts() {
-    const cell = (value: string | number) =>
-      `"${String(value).replaceAll('"', '""')}"`;
-    const rows = [
-      ["Código", "Descripción", "Precio", "Categoría"],
-      ...products.map((p) => [
-        p.codigo,
-        p.descripcion,
-        p.precio.toFixed(2),
-        p.categoria,
-      ]),
-    ];
     const url = URL.createObjectURL(
-      new Blob(
-        ["\uFEFF" + rows.map((row) => row.map(cell).join(",")).join("\r\n")],
-        { type: "text/csv;charset=utf-8" },
-      ),
+      new Blob([buildProductsCsv(products)], {
+        type: "text/csv;charset=utf-8",
+      }),
     );
     const link = document.createElement("a");
     link.href = url;
     link.download = "catalogo-bodega.csv";
     link.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 0);
   }
 
   return (
@@ -72,88 +74,169 @@ export default function App() {
       </a>
       <aside className="sidebar">
         <a className="brand" href="#contenido" aria-label="Bodega, inicio">
-          <ShoppingBasket size={26} strokeWidth={1.7} />
+          <span className="brand-symbol">
+            <Diamond size={24} strokeWidth={1.7} />
+          </span>
           <span>
             bodega<span className="brand-period">.</span>
+            <small>Atelier de productos</small>
           </span>
         </a>
         <div className="workspace">
           <span className="workspace-monogram">B</span>
           <div>
-            <strong>Mi catálogo</strong>
+            <strong>
+              Mi catálogo <i />
+            </strong>
             <span>Espacio de práctica</span>
           </div>
         </div>
         <nav aria-label="Navegación principal">
           <a className="nav-item active" href="#catalogo" aria-current="page">
-            <Boxes size={18} />
+            <Boxes size={17} />
             Productos<span>{products.length}</span>
           </a>
           <button className="nav-item" onClick={focusForm}>
-            <Plus size={18} />
+            <Plus size={17} />
             Registrar producto
           </button>
+          <a className="nav-item" href="#categorias">
+            <Layers3 size={17} />
+            Categorías
+          </a>
+          <a
+            className="nav-item"
+            href="https://github.com/David-Quispe/LAB10-JMIRANDA"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ClipboardList size={17} />
+            Código y pruebas
+            <ArrowUpRight size={13} />
+          </a>
         </nav>
         <div className="sidebar-bottom">
-          <ClipboardList size={18} />
+          <ShieldCheck size={18} />
           <div>
-            <strong>Laboratorio 10</strong>
-            <span>Componentes y eventos</span>
+            <strong>Memoria de sesión</strong>
+            <span>Sin persistencia ni servidor externo.</span>
           </div>
         </div>
       </aside>
       <div className="workspace-main">
         <div className="topbar">
-          <span>
-            Mi catálogo <span className="breadcrumb-divider">/</span>{" "}
-            <strong>Productos</strong>
-          </span>
+          <div className="breadcrumb">
+            <span className="atelier-name">
+              <Sparkles size={14} />
+              Atelier
+            </span>
+            <span>Mi catálogo</span>
+            <span className="breadcrumb-current">Productos</span>
+          </div>
           <span className="session-status">
             <span />
             Sesión local
           </span>
         </div>
         <main className="sheet" id="contenido">
-          <header className="page-heading">
-            <div>
-              <h1>Gestión de productos</h1>
-              <p>Todo tu catálogo, en un solo lugar.</p>
+          <header className="hero-block">
+            <div className="page-heading">
+              <div>
+                <p className="hero-label">
+                  <Sparkles size={13} />
+                  Tu catálogo, con otra mirada
+                </p>
+                <h1>
+                  Gestión de <em>productos</em>
+                </h1>
+                <p className="hero-description">
+                  Cada producto en su lugar. Consulta, organiza y da forma a tu
+                  catálogo desde un mismo espacio.
+                </p>
+              </div>
+              <div className="heading-actions">
+                <Button
+                  variant="outline"
+                  className="export-button"
+                  onClick={exportProducts}
+                >
+                  <ArrowDownToLine size={16} />
+                  Exportar CSV
+                </Button>
+                <Button className="new-product-button" onClick={focusForm}>
+                  <Plus size={17} />
+                  Nuevo producto
+                </Button>
+              </div>
             </div>
-            <Button
-              variant="outline"
-              className="export-button"
-              onClick={exportProducts}
-            >
-              <ArrowDownToLine size={16} />
-              Exportar CSV
-            </Button>
+            <div className="session-note">
+              <Info size={19} aria-hidden="true" />
+              <p>
+                <strong>Un espacio para practicar.</strong> Los productos se
+                guardan solo durante esta sesión. Al recargar, vuelves a los
+                cinco ejemplos iniciales.
+              </p>
+            </div>
           </header>
-          <div className="session-note">
-            <Info size={17} aria-hidden="true" />
-            <p>
-              <strong>Un espacio para practicar.</strong> Los productos se
-              guardan solo durante esta sesión. Al recargar, vuelves a los cinco
-              ejemplos iniciales.
-            </p>
-          </div>
           <div className="catalog-summary" aria-label="Resumen del catálogo">
-            <div>
-              <span>Productos en catálogo</span>
-              <strong>{products.length.toString().padStart(2, "0")}</strong>
-            </div>
-            <div>
-              <span>Categorías presentes</span>
-              <strong>{categories.toString().padStart(2, "0")}</strong>
-            </div>
-            <div>
-              <span>Agregados en esta sesión</span>
-              <strong className={products.length > 5 ? "positive-number" : ""}>
-                {(products.length - 5).toString().padStart(2, "0")}
+            <div className="summary-card">
+              <div className="summary-top">
+                <span>Productos en catálogo</span>
+                <Boxes size={18} />
+              </div>
+              <strong key={products.length} className="count-value">
+                {products.length.toString().padStart(2, "0")}
               </strong>
+              <div className="summary-rule" />
+              <p>
+                {initialProducts.length} ejemplos iniciales · {sessionCount}{" "}
+                nuevos
+              </p>
+            </div>
+            <div className="summary-card category-summary">
+              <div className="summary-top">
+                <span>Categorías presentes</span>
+                <Layers3 size={18} />
+              </div>
+              <strong className="count-value">
+                {categoryCount.toString().padStart(2, "0")}
+              </strong>
+              <div className="category-distribution" aria-hidden="true">
+                {productCategories.map((category) => (
+                  <span
+                    key={category}
+                    data-category={category}
+                    style={{
+                      flex: products.filter((p) => p.categoria === category)
+                        .length,
+                    }}
+                  />
+                ))}
+              </div>
+              <p>Bebidas, Abarrotes y Limpieza</p>
+            </div>
+            <div className="summary-card">
+              <div className="summary-top">
+                <span>Nuevos en esta sesión</span>
+                <PackagePlus size={18} />
+              </div>
+              <strong key={sessionCount} className="count-value">
+                {sessionCount.toString().padStart(2, "0")}
+              </strong>
+              <div className="summary-rule session-rule" />
+              <p>
+                {lastAdded
+                  ? `Último registro: ${formatCode(lastAdded)}`
+                  : "Tu próximo producto empieza aquí."}
+              </p>
             </div>
           </div>
           <div className="content-grid">
-            <ProductList products={products} lastAdded={lastAdded} />
+            <ProductList
+              key={lastAdded ?? "initial"}
+              products={products}
+              lastAdded={lastAdded}
+            />
             <section
               ref={formSection}
               id="registro"

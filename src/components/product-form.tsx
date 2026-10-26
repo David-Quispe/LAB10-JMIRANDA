@@ -69,6 +69,7 @@ export function ProductForm({
   return (
     <Card className="form-card shadow-none">
       <CardHeader>
+        <p className="form-eyebrow">Registro de catálogo</p>
         <CardTitle id="form-title">Nuevo producto</CardTitle>
         <CardDescription>
           Completa los datos para sumarlo al catálogo.

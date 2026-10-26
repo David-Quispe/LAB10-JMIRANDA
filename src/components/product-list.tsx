@@ -59,13 +59,21 @@ export function ProductList({
       aria-labelledby="catalog-title"
     >
       <div className="list-heading">
-        <h2 id="catalog-title">Catálogo de productos</h2>
+        <div>
+          <h2 id="catalog-title">Catálogo de productos</h2>
+          <p className="list-subtitle">Una colección, muchas posibilidades.</p>
+        </div>
         <span>{products.length} en total</span>
       </div>
-      <div className="category-filters" aria-label="Filtrar por categoría">
+      <div
+        id="categorias"
+        className="category-filters"
+        aria-label="Filtrar por categoría"
+      >
         {["Todas", ...categories].map((name) => (
           <button
             key={name}
+            data-category={name}
             onClick={() => setCategory(name)}
             aria-pressed={category === name}
             className={
@@ -162,7 +170,9 @@ export function ProductList({
                   )}
                 </TableCell>
                 <TableCell>
-                  <span className="category-label">{p.categoria}</span>
+                  <span className="category-label" data-category={p.categoria}>
+                    {p.categoria}
+                  </span>
                 </TableCell>
                 <TableCell className="product-price">
                   {formatPrice(p.precio)}
