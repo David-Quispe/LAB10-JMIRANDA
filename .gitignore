@@ -32,3 +32,4 @@ playwright-report/
 .taste-skill/inspect/
 .taste-skill/verified/
 .taste-skill/*-report.json
+.taste-skill/
