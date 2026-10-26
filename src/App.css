@@ -759,3 +759,6 @@
 .field-help, .field-error, .required-note, .auto-code-note, .list-footer, .page-footer { font-size: 12px; }
 .field-group input, .field-group select, .field-group label, .form-actions button, .search-input input { font-size: 13px; }
 .catalog-panel th { font-size: 12px; }
+/* El enlace de salto permanece oculto hasta recibir foco de teclado. */
+.skip-link { top: 0; left: 0; width: 1px; height: 1px; overflow: hidden; padding: 0; clip-path: inset(50%); white-space: nowrap; }
+.skip-link:focus { top: 10px; left: 20px; width: auto; height: auto; overflow: visible; padding: 12px; clip-path: none; }
